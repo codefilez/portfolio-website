@@ -9,13 +9,19 @@ repositories {
     jcenter()
     mavenCentral()
     maven { url = uri("https://dl.bintray.com/kotlin/kotlin-js-wrappers") }
+    maven { url = uri("https://dl.bintray.com/subroh0508/maven") }
 }
 
 dependencies {
+    val kotlinMaterialUiVersion = "0.5.0-beta2"
+
     testImplementation(kotlin("test-js"))
     implementation("org.jetbrains:kotlin-react:16.13.1-pre.113-kotlin-1.4.0")
     implementation("org.jetbrains:kotlin-react-dom:16.13.1-pre.113-kotlin-1.4.0")
     implementation("org.jetbrains:kotlin-styled:1.0.0-pre.113-kotlin-1.4.0")
+    implementation(npm("@material-ui/core", "^4.9.14"))
+    implementation("subroh0508.net.kotlinmaterialui", "core", kotlinMaterialUiVersion)
+    implementation("subroh0508.net.kotlinmaterialui", "lab", kotlinMaterialUiVersion)
 }
 
 kotlin {
