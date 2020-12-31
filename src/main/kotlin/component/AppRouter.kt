@@ -1,5 +1,6 @@
 package component
 
+import component.blog.BlogPage
 import kotlinx.css.Align
 import kotlinx.css.Display
 import kotlinx.css.FlexDirection
@@ -41,8 +42,8 @@ class AppRouter : RComponent<RProps, RState>() {
                         justifyContent = JustifyContent.center
                     }
                     switch {
-                        route("/blog", Blog::class, exact = true)
-                        route("/", Welcome::class, exact = true)
+                        route("/blog", BlogPage::class, exact = true)
+                        route("/", WelcomePage::class, exact = true)
                     }
                 }
                 siteFooter()

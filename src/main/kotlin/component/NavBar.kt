@@ -38,18 +38,16 @@ external interface NavBarProps : RProps {
 }
 
 class NavBar : RComponent<NavBarProps, NavBarState>() {
-    init {
+    override fun NavBarState.init() {
         setState {
             anchorEl = null
         }
-        console.log(this.state)
     }
 
     val setAnchorEl = { eventTarget: EventTarget? ->
         setState {
             anchorEl = eventTarget
         }
-        console.log(this.state)
     }
 
     private val handleMenu = { e: Event ->

@@ -10,6 +10,7 @@ repositories {
     mavenCentral()
     maven { url = uri("https://dl.bintray.com/kotlin/kotlin-js-wrappers") }
     maven { url = uri("https://dl.bintray.com/subroh0508/maven") }
+    maven { url = uri("https://kotlin.bintray.com/kotlinx/") }
 }
 
 dependencies {
@@ -21,6 +22,8 @@ dependencies {
     implementation("org.jetbrains", "kotlin-styled", "1.0.0-pre.113-kotlin-1.4.0")
     implementation("org.jetbrains", "kotlin-react-dom", "16.13.1-pre.113-kotlin-1.4.0")
     implementation("org.jetbrains", "kotlin-react-router-dom", "5.2.0-pre.134-kotlin-1.4.10")
+    implementation("org.jetbrains.kotlinx", "kotlinx-coroutines-core", "1.4.2")
+    implementation("org.jetbrains.kotlinx", "kotlinx-datetime", "0.1.1")
 
     implementation("subroh0508.net.kotlinmaterialui", "core", kotlinMaterialUiVersion)
     implementation("subroh0508.net.kotlinmaterialui", "lab", kotlinMaterialUiVersion)

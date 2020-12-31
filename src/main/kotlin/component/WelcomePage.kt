@@ -18,7 +18,7 @@ import styled.css
 import styled.styledDiv
 import styled.styledImg
 
-class Welcome : RComponent<RProps, RState>() {
+class WelcomePage : RComponent<RProps, RState>() {
 
     override fun RBuilder.render() {
         styledDiv {
