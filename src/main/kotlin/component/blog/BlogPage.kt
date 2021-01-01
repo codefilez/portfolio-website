@@ -40,7 +40,7 @@ class BlogPage : RComponent<RProps, BlogPageState>() {
     }
 
     private suspend fun fetchBlogPosts(): List<BlogPost> =
-        window.fetch("https://cv9mnyha5c.execute-api.us-east-1.amazonaws.com/rest/blog-posts")
+        window.fetch("https://blog-api.run3wide.com/rest/blog-posts")
             .await()
             .json()
             .await()
