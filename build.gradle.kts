@@ -30,6 +30,7 @@ dependencies {
 
     implementation(npm("@material-ui/core", "^4.9.14"))
     implementation(npm("@material-ui/icons", "^4.11.2"))
+    implementation(npm("amazon-cognito-auth-js", "^1.3.3"))
 }
 
 kotlin {

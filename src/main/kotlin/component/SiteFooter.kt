@@ -1,5 +1,8 @@
 package component
 
+import external.githubIcon
+import external.linkedInIcon
+import external.twitterIcon
 import kotlinx.css.Align
 import kotlinx.css.Color
 import kotlinx.css.Display
@@ -13,6 +16,7 @@ import kotlinx.css.justifyContent
 import kotlinx.css.marginTop
 import kotlinx.css.px
 import materialui.components.breadcrumbs.breadcrumbs
+import materialui.components.iconbutton.iconButton
 import materialui.components.link.link
 import react.RBuilder
 import styled.css
@@ -36,7 +40,7 @@ fun RBuilder.siteFooter() = styledDiv {
         }
         breadcrumbs {
             link {
-                +"LinkedIn"
+                iconButton { linkedInIcon {} }
                 attrs {
                     href = "https://www.linkedin.com/in/paul-robson-78a73a129/"
                     target = "_blank"
@@ -44,15 +48,14 @@ fun RBuilder.siteFooter() = styledDiv {
             }
 
             link {
-                +"Github"
+                iconButton { githubIcon {} }
                 attrs {
                     href = "https://github.com/run3wide"
                     target = "_blank"
                 }
             }
-
             link {
-                +"Twitter"
+                iconButton { twitterIcon {} }
                 attrs {
                     href = "https://twitter.com/run3wide"
                     target = "_blank"
@@ -60,6 +63,7 @@ fun RBuilder.siteFooter() = styledDiv {
             }
         }
     }
+
     styledP {
         css {
             color = Color.gray
