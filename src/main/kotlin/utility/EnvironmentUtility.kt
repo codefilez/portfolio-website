@@ -5,9 +5,7 @@ object EnvironmentUtility {
     private val IS_DEVELOPMENT = js("process.env.NODE_ENV") == "development"
 
     fun getEnvironmentVariable(variableName: String): String {
-        return if (IS_DEVELOPMENT) {
-            DEVELOPMENT_ENVIRONMENT_VARIABLES.getValue(variableName)
-        } else PRODUCTION_ENVIRONMENT_VARIABLES.getValue(variableName)
+        return PRODUCTION_ENVIRONMENT_VARIABLES.getValue(variableName)
     }
 
     private val PRODUCTION_ENVIRONMENT_VARIABLES: Map<String, String> = mapOf(

@@ -33,6 +33,7 @@ import react.setState
 import styled.css
 import styled.styledDiv
 import styled.styledP
+import utility.EnvironmentUtility
 
 class NavBar : RComponent<NavBarProps, NavBarState>() {
 
@@ -123,9 +124,11 @@ class NavBar : RComponent<NavBarProps, NavBarState>() {
                                         +"Sign in"
                                     }
                                 }
+                                val baseUri = EnvironmentUtility.getEnvironmentVariable("redirectBaseUrl")
+                                val clientId = EnvironmentUtility.getEnvironmentVariable("cognitoClientId")
                                 attrs {
                                     href =
-                                        "https://accounts.run3wide.com/login?client_id=5fbjc4kmluinl38lg0e8k343al&response_type=code&scope=openid&redirect_uri=http://localhost:8081/login/callback"
+                                        "https://accounts.run3wide.com/login?client_id=$clientId&response_type=code&scope=openid&redirect_uri=$baseUri/login/callback"
                                 }
                             }
                         }
