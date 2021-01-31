@@ -1,5 +1,6 @@
 package component.blog
 
+import kotlin.js.Date
 import kotlinx.browser.window
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.await
@@ -59,7 +60,7 @@ class BlogPage : RComponent<RProps, BlogPageState>() {
                         styledH1 {
                             +it.title
                         }
-                        styledP { +it.timestamp }
+                        styledP { +it.timestamp.convertToLocalTime() }
                         styledP {
                             css {
                                 whiteSpace = WhiteSpace.preWrap
@@ -70,5 +71,27 @@ class BlogPage : RComponent<RProps, BlogPageState>() {
                 }
             }
         }
+    }
+
+    private fun String.convertToLocalTime(): String {
+        val localDate = Date(this)
+        return localDate.getMonth().getMonthName() + " " + localDate.getDay().toString() + ", " + localDate.getFullYear().toString()
+    }
+
+    private fun Int.getMonthName(): String {
+        return arrayOf(
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        )[this]
     }
 }

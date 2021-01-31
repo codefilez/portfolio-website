@@ -153,4 +153,3 @@ external interface NavBarProps : RProps {
     var pathsWithDisplayName: List<Pair<String, String>>
     var isUserLoggedIn: Boolean
 }
-
