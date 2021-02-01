@@ -75,7 +75,7 @@ class BlogPage : RComponent<RProps, BlogPageState>() {
 
     private fun String.convertToLocalTime(): String {
         val localDate = Date(this)
-        return localDate.getMonth().getMonthName() + " " + localDate.getDay().toString() + ", " + localDate.getFullYear().toString()
+        return localDate.getMonth().getMonthName() + " " + localDate.getDate().toString() + ", " + localDate.getFullYear().toString()
     }
 
     private fun Int.getMonthName(): String {
