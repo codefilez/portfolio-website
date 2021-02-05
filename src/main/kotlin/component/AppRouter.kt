@@ -48,8 +48,8 @@ class AppRouter : RComponent<RProps, AppState>() {
                 }
                 navBar {
                     pathsWithDisplayName = listOf(
-                        "Home" to "/",
-                        "Blog" to "/blog"
+                        PathWithDisplayName("/", "Home"),
+                        PathWithDisplayName("/blog", "Blog"),
                     )
                     isUserLoggedIn = state.isUserLoggedIn
                 }
