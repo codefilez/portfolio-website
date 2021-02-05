@@ -4,9 +4,14 @@ import external.accountCircle
 import external.menuIcon
 import kotlinx.css.Color
 import kotlinx.css.LinearDimension
+import kotlinx.css.TextAlign
 import kotlinx.css.color
 import kotlinx.css.fontFamily
+import kotlinx.css.margin
 import kotlinx.css.marginLeft
+import kotlinx.css.properties.TextDecoration
+import kotlinx.css.textAlign
+import kotlinx.css.textDecoration
 import kotlinx.html.js.onClickFunction
 import materialui.components.appbar.appBar
 import materialui.components.appbar.enums.AppBarPosition
@@ -90,11 +95,22 @@ class NavBar : RComponent<NavBarProps, NavBarState>() {
                             }
                         }
                         props.pathsWithDisplayName.map {
-                            menuItem {
-                                attrs {
-                                    onClickFunction = handleCloseMenuItem
+                            routeLink(to = it.path) {
+                                styledDiv {
+                                    menuItem {
+                                        attrs {
+                                            onClickFunction = handleCloseMenuItem
+                                        }
+                                        styledP {
+                                            css {
+                                                margin = "auto"
+                                                textAlign = TextAlign.center
+                                                textDecoration = TextDecoration.none
+                                            }
+                                            +it.displayName
+                                        }
+                                    }
                                 }
-                                routeLink(it.second) { +it.first }
                             }
                         }
                     }
@@ -150,6 +166,11 @@ external interface NavBarState : RState {
 }
 
 external interface NavBarProps : RProps {
-    var pathsWithDisplayName: List<Pair<String, String>>
+    var pathsWithDisplayName: List<PathWithDisplayName>
     var isUserLoggedIn: Boolean
 }
+
+data class PathWithDisplayName(
+    val path: String,
+    val displayName: String,
+)
