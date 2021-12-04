@@ -27,10 +27,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Build
+      - name: Setup Node
         uses: actions/setup-node@v2
         with:
           node-version: "14"
+
+      - name: Build
         run: npm install && yarn build
 
       - name: Deploy static site to S3 bucket
