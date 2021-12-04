@@ -1,9 +1,8 @@
-name: Upload Website
+name: Deploy Website
 
 on:
   push:
     branches:
-      - main
       - PW-8_add_ci
 
 jobs:
