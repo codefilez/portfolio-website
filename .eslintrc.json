@@ -17,6 +17,11 @@
     "jest": true
   },
   "parserOptions": {
-    "ecmaVersion": 11
-  }
+    "ecmaVersion": 11,
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
+  },
+  "parser": "@babel/eslint-parser"
 }
