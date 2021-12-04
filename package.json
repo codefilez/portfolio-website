@@ -15,7 +15,10 @@
     "start": "node_modules/.bin/react-scripts start",
     "build": "node_modules/.bin/react-scripts build",
     "test": "node_modules/.bin/react-scripts test",
-    "eject": "node_modules/.bin/react-scripts eject"
+    "eject": "node_modules/.bin/react-scripts eject",
+    "lint": "npx eslint .",
+    "format": "npx prettier --write .",
+    "check": "npx prettier --check . && npm run test"
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +41,7 @@
   "devDependencies": {
     "eslint": "^8.4.0",
     "eslint-config-airbnb": "^19.0.2",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.27.1",
