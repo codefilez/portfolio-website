@@ -1,0 +1,31 @@
+name: Upload Website
+
+on:
+  push:
+    branches:
+      - main
+      - PW-8_add_ci
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Build
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14""
+      - run: npm build
+
+      - name: Deploy static site to S3 bucket
+        run: aws s3 sync ./build/ s3://run3wide/website-v2
+
