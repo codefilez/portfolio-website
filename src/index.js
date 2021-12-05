@@ -14,6 +14,8 @@ const StyledApp = styled.div({
   flexDirection: `column`,
   backgroundImage: `url("https://libreshot.com/wp-content/uploads/2019/11/lake-evening.jpg")`,
   backgroundSize: `100vw 100vh`,
+  backgroundRepeat: `no-repeat`,
+  backgroundAttachment: `fixed`,
 });
 
 const rootElement = document.getElementById(`root`);
