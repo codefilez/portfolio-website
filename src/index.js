@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./App";
-import Blogs from "./routes/Blogs";
+import BlogPosts from "./routes/BlogPosts";
 import Books from "./routes/Books";
 
 const rootElement = document.getElementById(`root`);
@@ -12,7 +12,7 @@ render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="books" element={<Books />} />
-      <Route path="blogs" element={<Blogs />} />
+      <Route path="blogs" element={<BlogPosts />} />
     </Routes>
   </BrowserRouter>,
   rootElement
