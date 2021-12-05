@@ -3,12 +3,10 @@ import styled from "@emotion/styled";
 import { StyledH1 } from "../../styling/StyledH1";
 
 const StyledWelcomePage = styled.div({
-  minHeight: `100vh`,
-  textAlign: `center`,
-  margin: `auto`,
-  justifyContent: `center`,
-  flexDirection: `column`,
   display: `flex`,
+  flexDirection: `column`,
+  alignItems: `center`,
+  margin: `auto`,
 });
 
 const WelcomePage = function app() {
