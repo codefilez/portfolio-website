@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// fetch("https://blog-api.run3wide.com/rest/blog-posts")
 
 const Blogs = function blogs() {
   const [posts, setPosts] = useState([]);
@@ -10,7 +9,12 @@ const Blogs = function blogs() {
       .then((data) => setPosts(data));
   }, []);
 
-  return posts.map(({ title }) => <p>{title}</p>);
+  return posts.map(({ title, text }) => (
+    <div>
+      <p>{title}</p>
+      <p>{text}</p>
+    </div>
+  ));
 };
 
 export default Blogs;
