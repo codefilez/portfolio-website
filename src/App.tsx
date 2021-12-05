@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
-import Welcome from "./routes/Welcome.tsx";
+import Welcome from "./routes/Welcome";
 
 const App = function app() {
   return (

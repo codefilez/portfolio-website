@@ -4,13 +4,13 @@ const Blogs = function blogs() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("https://blog-api.run3wide.com/rest/blog-posts")
+    fetch(`https://blog-api.run3wide.com/rest/blog-posts`)
       .then((response) => response.json())
       .then((data) => setPosts(data));
   }, []);
 
-  return posts.map(({ title, text }) => (
-    <div>
+  return posts.map(({ title, text, id }) => (
+    <div key={id}>
       <p>{title}</p>
       <p>{text}</p>
     </div>

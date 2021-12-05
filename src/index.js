@@ -6,7 +6,7 @@ import App from "./App";
 import Blogs from "./routes/Blogs";
 import Books from "./routes/Books";
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById(`root`);
 render(
   <BrowserRouter>
     <Routes>
