@@ -12,7 +12,7 @@ const StyledApp = styled.div({
   minHeight: `100vh`,
   display: `flex`,
   flexDirection: `column`,
-  backgroundImage: `url("https://libreshot.com/wp-content/uploads/2019/11/lake-evening.jpg")`,
+  backgroundImage: `url("https://images.run3wide.com/v2/lake-evening.jpg")`,
   backgroundSize: `100vw 100vh`,
   backgroundRepeat: `no-repeat`,
   backgroundAttachment: `fixed`,

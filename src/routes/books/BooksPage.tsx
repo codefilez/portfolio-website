@@ -1,3 +1,4 @@
+import { CenteredDiv } from "../../styling/CenteredDiv";
 import { StyledH1 } from "../../styling/StyledH1";
 
 const BooksPage = () => {
@@ -9,12 +10,12 @@ const BooksPage = () => {
     `Clean Craftsmanship by Robert Martin`,
   ];
   return (
-    <div>
+    <CenteredDiv>
       <StyledH1>Recently Read Bookshelf</StyledH1>
       {bookStrings.map((bookName) => (
         <p key={bookName}>{bookName}</p>
       ))}
-    </div>
+    </CenteredDiv>
   );
 };
 
