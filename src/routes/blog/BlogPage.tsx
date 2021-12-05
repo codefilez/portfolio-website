@@ -1,13 +1,9 @@
 import { useEffect, useState } from "react";
 import { getBlogPosts } from "../../api/BlogApi";
 import { BlogPost } from "../../Types";
-import styled from "@emotion/styled";
 import BlogPostCards from "./BlogPostCards";
 import { StyledH1 } from "../../styling/StyledH1";
-
-const CenteredDiv = styled.div({
-  textAlign: `center`,
-});
+import { CenteredDiv } from "../../styling/CenteredDiv";
 
 const BlogPage = () => {
   const [blogPosts, setBlogPosts] = useState<Array<BlogPost>>([]);
