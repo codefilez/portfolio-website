@@ -4,7 +4,7 @@ import { BlogPost } from "../Types";
 import { Card, CardContent, Typography } from "@mui/material";
 import styled from "@emotion/styled";
 
-const BlogPostsWrapper = styled.div({
+const BlogPostCardsWrapper = styled.div({
   display: `flex`,
   flexDirection: `column`,
   alignItems: `center`,
@@ -27,23 +27,27 @@ const BlogPosts = () => {
     getBlogPosts().then((data) => setBlogPosts(data));
   }, []);
 
-  const blogPostCards = blogPosts.map(({ title, text, id, timestamp }) => (
-    <StyledBlogPostCard key={id}>
-      <Card variant={`outlined`}>
-        <CardContent>
-          <Typography sx={{ fontWeight: `bold` }}>{title}</Typography>
-          <Typography>{text}</Typography>
-          <Typography>{timestamp}</Typography>
-        </CardContent>
-      </Card>
-    </StyledBlogPostCard>
-  ));
+  const blogPostCards = blogPosts.map(buildBlogPostCard);
 
   return (
     <CenteredDiv>
       <h1>Blog</h1>
-      <BlogPostsWrapper>{blogPostCards}</BlogPostsWrapper>
+      <BlogPostCardsWrapper>{blogPostCards}</BlogPostCardsWrapper>
     </CenteredDiv>
+  );
+};
+
+const buildBlogPostCard = (blogPost: BlogPost) => {
+  return (
+    <StyledBlogPostCard key={blogPost.id}>
+      <Card variant={`outlined`}>
+        <CardContent>
+          <Typography sx={{ fontWeight: `bold` }}>{blogPost.title}</Typography>
+          <Typography>{blogPost.text}</Typography>
+          <Typography>{blogPost.timestamp}</Typography>
+        </CardContent>
+      </Card>
+    </StyledBlogPostCard>
   );
 };
 
