@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import Welcome from "./Welcome";
+import WelcomePage from "./WelcomePage";
 
 test(`renders welcome message`, () => {
-  render(<Welcome />);
+  render(<WelcomePage />);
   const linkElement = screen.getByText(`Welcome to run3wide.com!`);
   expect(linkElement).toBeInTheDocument();
 });
