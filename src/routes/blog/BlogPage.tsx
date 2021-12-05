@@ -7,7 +7,6 @@ import { StyledH1 } from "../../styling/StyledH1";
 
 const CenteredDiv = styled.div({
   textAlign: `center`,
-  minHeight: `100vh`,
 });
 
 const BlogPage = () => {
