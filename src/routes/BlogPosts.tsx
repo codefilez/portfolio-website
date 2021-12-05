@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { getBlogPosts } from "../api/BlogApi";
 import { BlogPost } from "../Types";
 
-const Blogs = function blogs() {
-  const [posts, setPosts] = useState<Array<BlogPost>>([]);
+const BlogPosts = () => {
+  const [blogPosts, setBlogPosts] = useState<Array<BlogPost>>([]);
 
   useEffect(() => {
-    getBlogPosts().then((data) => setPosts(data));
+    getBlogPosts().then((data) => setBlogPosts(data));
   }, []);
 
-  return posts.map(({ title, text, id }) => (
+  return blogPosts.map(({ title, text, id }) => (
     <div key={id}>
       <p>{title}</p>
       <p>{text}</p>
@@ -17,4 +17,4 @@ const Blogs = function blogs() {
   ));
 };
 
-export default Blogs;
+export default BlogPosts;

@@ -1,4 +1,4 @@
-const Books = function books() {
+const Books = () => {
   const bookStrings = [
     `Domain Driven Design by Eric Evans`,
     `The Software Architect Elevator by Gregor Hohpe`,
