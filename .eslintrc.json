@@ -1,24 +1,12 @@
 {
-  "extends": [
-    "airbnb",
-    "prettier"
-  ],
-  "plugins": [
-    "prettier"
-  ],
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": [
-      "error"
-    ],
+    "prettier/prettier": ["error"],
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".tsx",
-          ".ts"
-        ]
+        "extensions": [".js", ".jsx", ".tsx", ".ts"]
       }
     ],
     "react/react-in-jsx-scope": "off"
@@ -32,9 +20,7 @@
     "ecmaVersion": 11,
     "requireConfigFile": false,
     "babelOptions": {
-      "presets": [
-        "@babel/preset-react"
-      ]
+      "presets": ["@babel/preset-react"]
     }
   },
   "parser": "@babel/eslint-parser"
