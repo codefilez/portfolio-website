@@ -10,7 +10,7 @@ const App = function app() {
         <img src={logo} className="App-logo" alt="logo" />
         <Welcome />
         <Link to="/books">Books</Link>
-        <Link to="/blogs">Blogs</Link>
+        <Link to="/blog">Blog</Link>
       </header>
     </div>
   );

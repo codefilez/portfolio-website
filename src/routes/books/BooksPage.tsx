@@ -1,4 +1,11 @@
-const Books = () => {
+import styled from "@emotion/styled";
+import { StyledH1 } from "../../styling/StyledH1";
+
+const StyledBooksPage = styled.div({
+  minHeight: `100vh`,
+});
+
+const BooksPage = () => {
   const bookStrings = [
     `Domain Driven Design by Eric Evans`,
     `The Software Architect Elevator by Gregor Hohpe`,
@@ -7,13 +14,13 @@ const Books = () => {
     `Clean Craftsmanship by Robert Martin`,
   ];
   return (
-    <main style={{ padding: `1rem 0` }}>
-      <h2>Recently Read Bookshelf</h2>
+    <StyledBooksPage>
+      <StyledH1>Recently Read Bookshelf</StyledH1>
       {bookStrings.map((bookName) => (
         <p key={bookName}>{bookName}</p>
       ))}
-    </main>
+    </StyledBooksPage>
   );
 };
 
-export default Books;
+export default BooksPage;
