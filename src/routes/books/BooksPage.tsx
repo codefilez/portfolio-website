@@ -1,9 +1,5 @@
-import styled from "@emotion/styled";
+import { CenteredDiv } from "../../styling/CenteredDiv";
 import { StyledH1 } from "../../styling/StyledH1";
-
-const StyledBooksPage = styled.div({
-  minHeight: `100vh`,
-});
 
 const BooksPage = () => {
   const bookStrings = [
@@ -14,12 +10,12 @@ const BooksPage = () => {
     `Clean Craftsmanship by Robert Martin`,
   ];
   return (
-    <StyledBooksPage>
+    <CenteredDiv>
       <StyledH1>Recently Read Bookshelf</StyledH1>
       {bookStrings.map((bookName) => (
         <p key={bookName}>{bookName}</p>
       ))}
-    </StyledBooksPage>
+    </CenteredDiv>
   );
 };
 
