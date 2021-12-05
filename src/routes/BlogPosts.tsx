@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getBlogPosts } from "../api/BlogApi";
 import { BlogPost } from "../Types";
+import { Card, CardContent, Typography } from "@mui/material";
 
 const BlogPosts = () => {
   const [blogPosts, setBlogPosts] = useState<Array<BlogPost>>([]);
@@ -9,12 +10,16 @@ const BlogPosts = () => {
     getBlogPosts().then((data) => setBlogPosts(data));
   }, []);
 
-  return blogPosts.map(({ title, text, id }) => (
-    <div key={id}>
-      <p>{title}</p>
-      <p>{text}</p>
-    </div>
+  const blogPostCards = blogPosts.map(({ title, text, id }) => (
+    <Card key={id} variant={`outlined`}>
+      <CardContent>
+        <Typography variant={`h4`}>{title}</Typography>
+        <Typography variant={`body1`}>{text}</Typography>
+      </CardContent>
+    </Card>
   ));
+
+  return <div>{blogPostCards}</div>;
 };
 
 export default BlogPosts;
