@@ -2,13 +2,15 @@ import { useEffect, useState } from "react";
 import { getBlogPosts } from "../../api/BlogApi";
 import { BlogPost } from "../../Types";
 import styled from "@emotion/styled";
-import BlogPostCards from "./BlogPostCard";
+import BlogPostCards from "./BlogPostCards";
+import { StyledH1 } from "../../styling/StyledH1";
 
 const CenteredDiv = styled.div({
   textAlign: `center`,
+  minHeight: `100vh`,
 });
 
-const BlogPostPage = () => {
+const BlogPage = () => {
   const [blogPosts, setBlogPosts] = useState<Array<BlogPost>>([]);
 
   useEffect(() => {
@@ -17,10 +19,10 @@ const BlogPostPage = () => {
 
   return (
     <CenteredDiv>
-      <h1>Blog</h1>
+      <StyledH1>Blog</StyledH1>
       {BlogPostCards(blogPosts)}
     </CenteredDiv>
   );
 };
 
-export default BlogPostPage;
+export default BlogPage;

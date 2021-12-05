@@ -8,6 +8,11 @@ const StyledBlogPostCard = styled.div({
   textAlign: `left`,
 });
 
+const StyledCardContent = styled.div({
+  background: `black`,
+  color: `white`,
+});
+
 export const BlogPostCardsWrapper = styled.div({
   display: `flex`,
   flexDirection: `column`,
@@ -18,11 +23,15 @@ const toCard = (blogPost: BlogPost) => {
   return (
     <StyledBlogPostCard key={blogPost.id}>
       <Card variant={`outlined`}>
-        <CardContent>
-          <Typography sx={{ fontWeight: `bold` }}>{blogPost.title}</Typography>
-          <Typography>{blogPost.text}</Typography>
-          <Typography>{blogPost.timestamp}</Typography>
-        </CardContent>
+        <StyledCardContent>
+          <CardContent>
+            <Typography sx={{ fontWeight: `bold` }}>
+              {blogPost.title}
+            </Typography>
+            <Typography>{blogPost.text}</Typography>
+            <Typography>{blogPost.timestamp}</Typography>
+          </CardContent>
+        </StyledCardContent>
       </Card>
     </StyledBlogPostCard>
   );
