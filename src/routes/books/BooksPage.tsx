@@ -1,9 +1,4 @@
-import styled from "@emotion/styled";
 import { StyledH1 } from "../../styling/StyledH1";
-
-const StyledBooksPage = styled.div({
-  minHeight: `100vh`,
-});
 
 const BooksPage = () => {
   const bookStrings = [
@@ -14,12 +9,12 @@ const BooksPage = () => {
     `Clean Craftsmanship by Robert Martin`,
   ];
   return (
-    <StyledBooksPage>
+    <div>
       <StyledH1>Recently Read Bookshelf</StyledH1>
       {bookStrings.map((bookName) => (
         <p key={bookName}>{bookName}</p>
       ))}
-    </StyledBooksPage>
+    </div>
   );
 };
 
