@@ -13,7 +13,9 @@ const BooksPage = () => {
     <CenteredDiv>
       <StyledH1>Recently Read Bookshelf</StyledH1>
       {bookStrings.map((bookName) => (
-        <p key={bookName}>{bookName}</p>
+        <p key={bookName} style={{ color: `white` }}>
+          {bookName}
+        </p>
       ))}
     </CenteredDiv>
   );
