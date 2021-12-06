@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { BlogPost } from "../../Types";
 import { Card, CardContent, Typography } from "@mui/material";
+import { humanFriendlyDate } from "../../utilty/TimestampUtility";
 
 const StyledBlogPostCard = styled.div({
   padding: `1rem`,
@@ -31,7 +32,7 @@ const toCard = (blogPost: BlogPost) => {
           </Typography>
           <Typography style={{ color: `white` }}>{blogPost.text}</Typography>
           <Typography style={{ color: `white` }}>
-            {blogPost.timestamp}
+            {humanFriendlyDate(blogPost.timestamp)}
           </Typography>
         </CardContent>
       </Card>
