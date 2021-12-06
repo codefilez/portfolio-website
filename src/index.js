@@ -6,6 +6,7 @@ import WelcomePage from "./routes/welcome/WelcomePage";
 import BlogPage from "./routes/blog/BlogPage";
 import BooksPage from "./routes/books/BooksPage";
 import styled from "@emotion/styled";
+import CustomNavbar from "./components/CustomNavbar";
 
 const StyledApp = styled.div({
   background: `#282c34`,
@@ -22,6 +23,7 @@ const rootElement = document.getElementById(`root`);
 render(
   <StyledApp>
     <BrowserRouter>
+      <CustomNavbar />
       <Routes>
         <Route path="/" element={<WelcomePage />} />
         <Route path="books" element={<BooksPage />} />
