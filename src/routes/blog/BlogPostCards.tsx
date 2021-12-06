@@ -20,9 +20,9 @@ const toCard = (blogPost: BlogPost) => {
       <Card
         variant={`outlined`}
         style={{
-          backgroundColor: `black`,
-          color: `white`,
           opacity: `70%`,
+          background: `transparent`,
+          border: `none`,
         }}
       >
         <CardContent>
