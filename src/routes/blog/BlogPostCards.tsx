@@ -20,15 +20,19 @@ const toCard = (blogPost: BlogPost) => {
       <Card
         variant={`outlined`}
         style={{
-          backgroundColor: `black`,
-          color: `white`,
           opacity: `70%`,
+          background: `transparent`,
+          border: `none`,
         }}
       >
         <CardContent>
-          <Typography sx={{ fontWeight: `bold` }}>{blogPost.title}</Typography>
-          <Typography>{blogPost.text}</Typography>
-          <Typography>{blogPost.timestamp}</Typography>
+          <Typography style={{ color: `white` }} sx={{ fontWeight: `bold` }}>
+            {blogPost.title}
+          </Typography>
+          <Typography style={{ color: `white` }}>{blogPost.text}</Typography>
+          <Typography style={{ color: `white` }}>
+            {blogPost.timestamp}
+          </Typography>
         </CardContent>
       </Card>
     </StyledBlogPostCard>
