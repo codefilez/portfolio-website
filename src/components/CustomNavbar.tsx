@@ -30,6 +30,7 @@ const CustomNavbar = () => {
           display: `grid`,
           gridTemplateColumns: `repeat(3,1fr)`,
           textAlign: `center`,
+          position: `static`,
         }}
       >
         <StyledLink to={`/books`} displayText={`Books`} />
