@@ -17,7 +17,7 @@ const styledIcon = (
 ) => (
   <Component
     onClick={openInNewTab(url)}
-    style={{ color: `white`, fontSize: `2rem` }}
+    style={{ color: `white`, fontSize: `2rem`, cursor: `pointer` }}
   />
 );
 
