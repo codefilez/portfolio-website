@@ -7,6 +7,7 @@ import BlogPage from "./routes/blog/BlogPage";
 import BooksPage from "./routes/books/BooksPage";
 import styled from "@emotion/styled";
 import CustomNavbar from "./components/CustomNavbar";
+import SocialBreadcrumbs from "./components/SocialBreadcrumbs";
 
 const StyledApp = styled.div({
   background: `#282c34`,
@@ -29,6 +30,7 @@ render(
         <Route path="books" element={<BooksPage />} />
         <Route path="blog" element={<BlogPage />} />
       </Routes>
+      <SocialBreadcrumbs />
     </BrowserRouter>
   </StyledApp>,
   rootElement
