@@ -7,9 +7,28 @@ const SocialBreadcrumbs = () => {
   return (
     <div style={{ display: `flex`, justifyContent: `center`, color: `white` }}>
       <Breadcrumbs style={{ color: `white`, fontSize: `2rem` }}>
-        <LinkedInIcon style={{ color: `white`, fontSize: `2rem` }} />
-        <TwitterIcon style={{ color: `white`, fontSize: `2rem` }} />
-        <GitHubIcon style={{ color: `white`, fontSize: `2rem` }} />
+        <LinkedInIcon
+          onClick={() => {
+            window.open(
+              `https://www.linkedin.com/in/paul-robson-78a73a129`,
+              `_blank`
+            );
+          }}
+          style={{ color: `white`, fontSize: `2rem` }}
+        />
+
+        <TwitterIcon
+          onClick={() => {
+            window.open(`https://twitter.com/run3wide`, `_blank`);
+          }}
+          style={{ color: `white`, fontSize: `2rem` }}
+        />
+        <GitHubIcon
+          onClick={() => {
+            window.open(`https://github.com/run3wide`, `_blank`);
+          }}
+          style={{ color: `white`, fontSize: `2rem` }}
+        />
       </Breadcrumbs>
     </div>
   );
