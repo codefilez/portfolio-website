@@ -6,7 +6,6 @@ const StyledBlogPostCard = styled.div({
   padding: `1rem`,
   width: `50%`,
   textAlign: `left`,
-  opacity: `75%`,
 });
 
 export const BlogPostCardsWrapper = styled.div({
@@ -18,7 +17,14 @@ export const BlogPostCardsWrapper = styled.div({
 const toCard = (blogPost: BlogPost) => {
   return (
     <StyledBlogPostCard key={blogPost.id}>
-      <Card variant={`outlined`}>
+      <Card
+        variant={`outlined`}
+        style={{
+          backgroundColor: `black`,
+          color: `white`,
+          opacity: `70%`,
+        }}
+      >
         <CardContent>
           <Typography sx={{ fontWeight: `bold` }}>{blogPost.title}</Typography>
           <Typography>{blogPost.text}</Typography>
