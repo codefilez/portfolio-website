@@ -2,6 +2,8 @@
 
 Starting app for Paul Robson's portfolio Website.
 
+Progress is tracked in [Jira](https://run3wide.atlassian.net/jira/software/projects/PW/boards/2).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
