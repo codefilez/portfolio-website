@@ -28,14 +28,15 @@ const CustomNavbar = () => {
           background: `none`,
           boxShadow: `none`,
           display: `grid`,
-          gridTemplateColumns: `repeat(3,1fr)`,
+          gridTemplateColumns: `repeat(4,1fr)`,
           textAlign: `center`,
           position: `static`,
         }}
       >
-        <StyledLink to={`/books`} displayText={`Books`} />
         <StyledLink to={`/`} displayText={`Home`} />
+        <StyledLink to={`/books`} displayText={`Books`} />
         <StyledLink to={`/blog`} displayText={`Blog`} />
+        <StyledLink to={`/lawn`} displayText={`Lawn`} />
       </AppBar>
       <Toolbar />
     </div>
