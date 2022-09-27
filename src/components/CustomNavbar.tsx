@@ -28,7 +28,7 @@ const CustomNavbar = () => {
           background: `none`,
           boxShadow: `none`,
           display: `grid`,
-          gridTemplateColumns: `repeat(4,1fr)`,
+          gridTemplateColumns: `repeat(3,1fr)`,
           textAlign: `center`,
           position: `static`,
         }}
@@ -36,7 +36,6 @@ const CustomNavbar = () => {
         <StyledLink to={`/`} displayText={`Home`} />
         <StyledLink to={`/books`} displayText={`Books`} />
         <StyledLink to={`/blog`} displayText={`Blog`} />
-        <StyledLink to={`/lawn`} displayText={`Lawn`} />
       </AppBar>
       <Toolbar />
     </div>
