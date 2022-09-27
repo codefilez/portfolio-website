@@ -8,7 +8,6 @@ import BooksPage from "./routes/books/BooksPage";
 import styled from "@emotion/styled";
 import CustomNavbar from "./components/CustomNavbar";
 import SiteFooter from "./components/SiteFooter";
-import LawnPage from "./routes/lawn/LawnPage";
 
 const StyledApp = styled.div({
   background: `#282c34`,
@@ -30,7 +29,6 @@ render(
         <Route path="/" element={<WelcomePage />} />
         <Route path="books" element={<BooksPage />} />
         <Route path="blog" element={<BlogPage />} />
-        <Route path="lawn" element={<LawnPage />} />
       </Routes>
       <SiteFooter />
     </BrowserRouter>
