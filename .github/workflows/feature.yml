@@ -12,21 +12,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Cache NPM Dependencies
-        uses: actions/cache@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'  # Specify the version of Node.js you need
+
+      - name: Cache npm dependencies
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: "14"
-
-      - name: NPM Install
-        run: npm install
+      - name: Install dependencies
+        run: npm ci
 
       - name: Run tests
         run: npm run check

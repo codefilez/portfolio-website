@@ -18,7 +18,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.0.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -28,7 +28,7 @@
     "eject": "node_modules/.bin/react-scripts eject",
     "lint": "npx eslint .",
     "format": "npx prettier --write .",
-    "check": "npx prettier --check . && npm run test"
+    "check": "npx eslint . && npm run test"
   },
   "eslintConfig": {
     "extends": [
