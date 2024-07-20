@@ -31,10 +31,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: "20"
 
-      - name: Build
-        run: npm install && yarn build
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run optimized build
+        run: npm run build
 
       - name: Deploy static site to S3 bucket
         run: aws s3 sync ./build/ s3://run3wide/website-v2
