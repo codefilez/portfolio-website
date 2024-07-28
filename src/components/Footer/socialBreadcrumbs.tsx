@@ -21,19 +21,15 @@ const styledIcon = (
   />
 );
 
-const SocialBreadcrumbs = () => {
-  return (
-    <div style={{ display: `flex`, justifyContent: `center`, color: `white` }}>
-      <Breadcrumbs style={{ color: `white`, fontSize: `2rem` }}>
-        {styledIcon(
-          LinkedInIcon,
-          `https://www.linkedin.com/in/paul-robson-78a73a129`
-        )}
-        {styledIcon(TwitterIcon, `https://twitter.com/run3wide`)}
-        {styledIcon(GitHubIcon, `https://github.com/run3wide`)}
-      </Breadcrumbs>
-    </div>
-  );
-};
-
-export default SocialBreadcrumbs;
+export const SocialBreadcrumbs = () => (
+  <div style={{ display: `flex`, justifyContent: `center`, color: `white` }}>
+    <Breadcrumbs style={{ color: `white`, fontSize: `2rem` }}>
+      {styledIcon(
+        LinkedInIcon,
+        `https://www.linkedin.com/in/paul-robson-78a73a129`
+      )}
+      {styledIcon(TwitterIcon, `https://twitter.com/run3wide`)}
+      {styledIcon(GitHubIcon, `https://github.com/run3wide`)}
+    </Breadcrumbs>
+  </div>
+);

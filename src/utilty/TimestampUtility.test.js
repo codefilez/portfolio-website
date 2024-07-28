@@ -1,4 +1,4 @@
-import { humanFriendlyDate } from "./TimestampUtility";
+import { humanFriendlyDate } from "./timestampUtility";
 import * as assert from "assert";
 
 test(`should be December 30, 2020`, () => {

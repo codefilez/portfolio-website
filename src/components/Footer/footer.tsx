@@ -1,6 +1,6 @@
-import SocialBreadcrumbs from "./SocialBreadcrumbs";
+import { SocialBreadcrumbs } from "./socialBreadcrumbs";
 
-const SiteFooter = () => {
+export const Footer = () => {
   return (
     <div
       style={{
@@ -16,5 +16,3 @@ const SiteFooter = () => {
     </div>
   );
 };
-
-export default SiteFooter;

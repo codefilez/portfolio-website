@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { getBlogPosts } from "../../api/BlogApi";
 import { BlogPost } from "../../Types";
-import BlogPostCards from "./BlogPostCards";
+import BlogPostCards from "./blogPostCards";
 import { CenteredDiv } from "../../styling/CenteredDiv";
 
-const BlogPage = () => {
+export const BlogPage = () => {
   const [blogPosts, setBlogPosts] = useState<Array<BlogPost>>([]);
 
   useEffect(() => {
@@ -13,5 +13,3 @@ const BlogPage = () => {
 
   return <CenteredDiv>{BlogPostCards(blogPosts)}</CenteredDiv>;
 };
-
-export default BlogPage;
