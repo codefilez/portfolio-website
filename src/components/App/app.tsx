@@ -8,6 +8,7 @@ import { ThemeProvider } from "@mui/system";
 import { StyledDiv } from "./styles";
 import { NavBar } from "../NavBar";
 import { createTheme } from "@mui/material";
+import { WintenHomePage } from "../../routes/winten/wintenHomePage";
 
 type EmptyProps = Record<string, never>;
 
@@ -36,6 +37,7 @@ export const App: React.FC<EmptyProps> = () => {
               <Route path="/" element={<WelcomePage />} />
               <Route path="books" element={<BooksPage />} />
               <Route path="blog" element={<BlogPage />} />
+              <Route path="winten" element={<WintenHomePage />} />
             </Routes>
             <Footer />
           </ThemeProvider>
