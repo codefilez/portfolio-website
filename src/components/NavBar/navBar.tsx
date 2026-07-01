@@ -6,6 +6,7 @@ export const NavBar = () => (
       <StyledLinkV2 to={`/`}>Home</StyledLinkV2>
       <StyledLinkV2 to={`/books`}>Books</StyledLinkV2>
       <StyledLinkV2 to={`/blog`}>Blog</StyledLinkV2>
+      <StyledLinkV2 to={`/racing`}>Racing</StyledLinkV2>
     </StyledAppBar>
   </>
 );
