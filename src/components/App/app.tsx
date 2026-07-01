@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { WelcomePage } from "../../routes/welcome/WelcomePage";
 import { BooksPage } from "../../routes/books/booksPage";
 import { BlogPage } from "../../routes/blog/blogPage";
+import { RacingPage } from "../../routes/racing/RacingPage";
 import { Footer } from "../Footer";
 import { ThemeProvider } from "@mui/system";
 import { StyledDiv } from "./styles";
@@ -36,6 +37,7 @@ export const App: React.FC<EmptyProps> = () => {
               <Route path="/" element={<WelcomePage />} />
               <Route path="books" element={<BooksPage />} />
               <Route path="blog" element={<BlogPage />} />
+              <Route path="racing" element={<RacingPage />} />
             </Routes>
             <Footer />
           </ThemeProvider>

@@ -12,7 +12,7 @@ export const StyledLinkV2 = styled(Link)`
 export const StyledAppBar = styled(AppBar)`
   box-shadow: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   text-align: center;
   position: static;
   background-color: transparent;
