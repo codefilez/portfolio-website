@@ -10,34 +10,34 @@ Built with [Vite](https://vitejs.dev/) + React + TypeScript.
 
 In the project directory, you can run:
 
-### `npm run dev`
+### `pnpm run dev`
 
 Runs the app in development mode with hot module reloading.\
 Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 
-### `npm test`
+### `pnpm test`
 
 Runs the test suite once with [Vitest](https://vitest.dev/).\
-Use `npm run test:watch` for interactive watch mode.
+Use `pnpm run test:watch` for interactive watch mode.
 
-### `npm run build`
+### `pnpm run build`
 
 Type-checks the project and builds the app for production to the `build` folder.\
 The build is minified and the filenames include content hashes.
 
-### `npm run preview`
+### `pnpm run preview`
 
 Serves the production build locally to sanity-check it before deploying.
 
-### `npm run lint`
+### `pnpm run lint`
 
 Lints the project with ESLint.
 
-### `npm run format`
+### `pnpm run format`
 
 Formats the project with Prettier.
 
-### `npm run check`
+### `pnpm run check`
 
 Runs lint and the test suite together.
 
