@@ -1,4 +1,4 @@
-import { Breadcrumbs } from "@mui/material";
+import { Stack } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -17,19 +17,23 @@ const styledIcon = (
 ) => (
   <Component
     onClick={openInNewTab(url)}
-    style={{ color: `white`, fontSize: `2rem`, cursor: `pointer` }}
+    sx={{
+      color: `text.secondary`,
+      fontSize: `1.4rem`,
+      cursor: `pointer`,
+      transition: `color 0.15s ease`,
+      "&:hover": { color: `text.primary` },
+    }}
   />
 );
 
 export const SocialBreadcrumbs = () => (
-  <div style={{ display: `flex`, justifyContent: `center`, color: `white` }}>
-    <Breadcrumbs style={{ color: `white`, fontSize: `2rem` }}>
-      {styledIcon(
-        LinkedInIcon,
-        `https://www.linkedin.com/in/paul-robson-78a73a129`,
-      )}
-      {styledIcon(TwitterIcon, `https://twitter.com/run3wide`)}
-      {styledIcon(GitHubIcon, `https://github.com/run3wide`)}
-    </Breadcrumbs>
-  </div>
+  <Stack direction="row" spacing={2.5}>
+    {styledIcon(
+      LinkedInIcon,
+      `https://www.linkedin.com/in/paul-robson-78a73a129`,
+    )}
+    {styledIcon(TwitterIcon, `https://twitter.com/run3wide`)}
+    {styledIcon(GitHubIcon, `https://github.com/run3wide`)}
+  </Stack>
 );

@@ -1,12 +1,12 @@
-import styled from "@emotion/styled";
+import { styled } from "@mui/system";
 
-export const StyledDiv = styled.div({
-  background: `#282c34`,
+export const StyledDiv = styled(`div`)({
   minHeight: `100vh`,
+  background: `
+    radial-gradient(1200px circle at 15% -10%, rgba(99, 102, 241, 0.18), transparent 60%),
+    radial-gradient(900px circle at 90% 10%, rgba(34, 211, 238, 0.12), transparent 55%),
+    #0A0E1A
+  `,
   display: `flex`,
   flexDirection: `column`,
-  backgroundImage: `url("https://images.run3wide.com/v2/lake-evening.jpg")`,
-  backgroundSize: `100vw 100vh`,
-  backgroundRepeat: `no-repeat`,
-  backgroundAttachment: `fixed`,
 });
