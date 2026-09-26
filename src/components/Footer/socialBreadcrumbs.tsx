@@ -3,7 +3,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
-import { SvgIconTypeMap } from "@mui/material/SvgIcon/SvgIcon";
+import { SvgIconTypeMap } from "@mui/material/SvgIcon";
 
 const openInNewTab = (url: string) => {
   return () => {
@@ -13,7 +13,7 @@ const openInNewTab = (url: string) => {
 
 const styledIcon = (
   Component: OverridableComponent<SvgIconTypeMap>,
-  url: string
+  url: string,
 ) => (
   <Component
     onClick={openInNewTab(url)}
@@ -26,7 +26,7 @@ export const SocialBreadcrumbs = () => (
     <Breadcrumbs style={{ color: `white`, fontSize: `2rem` }}>
       {styledIcon(
         LinkedInIcon,
-        `https://www.linkedin.com/in/paul-robson-78a73a129`
+        `https://www.linkedin.com/in/paul-robson-78a73a129`,
       )}
       {styledIcon(TwitterIcon, `https://twitter.com/run3wide`)}
       {styledIcon(GitHubIcon, `https://github.com/run3wide`)}
